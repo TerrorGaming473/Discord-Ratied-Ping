@@ -76,7 +76,7 @@ jobs:
         with:
           name: Android Build
           path: export/release/android/bin/app/build/outputs/apk/debug
-buildWindows:
+name: Windows Build
     runs-on: windows-latest
     
     steps:
