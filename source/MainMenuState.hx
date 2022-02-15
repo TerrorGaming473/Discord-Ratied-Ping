@@ -211,10 +211,7 @@ class MainMenuState extends MusicBeatState
 		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
 
         if (optionShit[curSelected] == 'story_mode')
-        {
-                changeItem(-1);
-                changeItem(1);
-
+		{
                 char1.dance();
                 char1.updateHitbox();
                 char1.visible = true;
@@ -226,9 +223,6 @@ class MainMenuState extends MusicBeatState
         
         if (optionShit[curSelected] == 'freeplay')
         {
-                changeItem(-1);
-                changeItem(1);
-
                 char2.dance();
                 char2.updateHitbox();
                 char2.visible = true;
@@ -240,9 +234,6 @@ class MainMenuState extends MusicBeatState
         
         if (optionShit[curSelected] == 'awards')
         {
-                changeItem(-1);
-                changeItem(1);
-
                 char3.dance();
                 char3.updateHitbox();
                 char3.visible = true;
@@ -254,9 +245,6 @@ class MainMenuState extends MusicBeatState
         
         if (optionShit[curSelected] == 'credits')
         {
-                changeItem(-1);
-                changeItem(1);
-
                 char4.dance();
                 char4.updateHitbox();
                 char4.visible = true;
@@ -268,9 +256,6 @@ class MainMenuState extends MusicBeatState
         
         if (optionShit[curSelected] == 'options')
         {
-                changeItem(-1);
-                changeItem(1);
-
                 char5.dance();
                 char5.updateHitbox();
                 char5.visible = true;
