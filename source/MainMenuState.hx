@@ -183,7 +183,7 @@ class MainMenuState extends MusicBeatState
                 {
                         menuC1.updateHitbox();
                         menuC1.visible = true;
-                {
+                }
                 else
                 {
                         menuC1.visible = false;
@@ -193,7 +193,7 @@ class MainMenuState extends MusicBeatState
                 {
                         menuC2.updateHitbox();
                         menuC2.visible = true;
-                {
+                }
                 else
                 {
                         menuC2.visible = false;
@@ -203,7 +203,7 @@ class MainMenuState extends MusicBeatState
                 {
                         menuC3.updateHitbox();
                         menuC3.visible = true;
-                {
+                }
                 else
                 {
                         menuC3.visible = false;
@@ -213,7 +213,7 @@ class MainMenuState extends MusicBeatState
                 {
                         menuC4.updateHitbox();
                         menuC4.visible = true;
-                {
+                }
                 else
                 {
                         menuC4.visible = false;
@@ -223,7 +223,7 @@ class MainMenuState extends MusicBeatState
                 {
                         menuC5.updateHitbox();
                         menuC5.visible = true;
-                {
+                }
                 else
                 {
                         menuC5.visible = false;
