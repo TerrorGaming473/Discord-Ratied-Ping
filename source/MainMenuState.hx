@@ -183,52 +183,6 @@ class MainMenuState extends MusicBeatState
 			menuItem.updateHitbox();
 		}
 
-                //characters in right lol
-                if (optionShit[curSelected] == 'story_mode')
-                {
-                        menuC1.visible = true
-                }
-                else
-                {
-                        menuC1.visible = false
-                }
-
-                if (optionShit[curSelected] == 'freeplay')
-                {
-                        menuC2.visible = true
-                }
-                else
-                {
-                        menuC2.visible = false
-                }
-
-                if (optionShit[curSelected] == 'awards')
-                {
-                        menuC3.visible = true
-                }
-                else
-                {
-                        menuC3.visible = false
-                }
-
-                if (optionShit[curSelected] == 'credits')
-                {
-                        menuC4.visible = true
-                }
-                else
-                {
-                        menuC4.visible = false
-                }
-
-                if (optionShit[curSelected] == 'options')
-                {
-                        menuC5.visible = true
-                }
-                else
-                {
-                        menuC5.visible = false
-                }
-
 		//FlxG.camera.follow(camFollowPos, null, 1);
 
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
@@ -367,6 +321,52 @@ class MainMenuState extends MusicBeatState
 		}
 
 		super.update(elapsed);
+                
+                //characters in right lol
+                if (optionShit[curSelected] == 'story_mode')
+                {
+                        menuC1.visible = true
+                }
+                else
+                {
+                        menuC1.visible = false
+                }
+
+                if (optionShit[curSelected] == 'freeplay')
+                {
+                        menuC2.visible = true
+                }
+                else
+                {
+                        menuC2.visible = false
+                }
+
+                if (optionShit[curSelected] == 'awards')
+                {
+                        menuC3.visible = true
+                }
+                else
+                {
+                        menuC3.visible = false
+                }
+
+                if (optionShit[curSelected] == 'credits')
+                {
+                        menuC4.visible = true
+                }
+                else
+                {
+                        menuC4.visible = false
+                }
+
+                if (optionShit[curSelected] == 'options')
+                {
+                        menuC5.visible = true
+                }
+                else
+                {
+                        menuC5.visible = false
+                }
 
 		menuItems.forEach(function(spr:FlxSprite)
 		{
