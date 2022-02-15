@@ -105,45 +105,45 @@ class MainMenuState extends MusicBeatState
                 menuC1.scrollFactor.set(0, 0);
 		menuC1.updateHitbox();
 		menuC1.screenCenter();
-		menuC1.visible = false;
 		menuC1.antialiasing = ClientPrefs.globalAntialiasing;
 		add(menuC1);
+                menuC1.visible = false;
 
                 menuC2 = new FlxSprite(0).loadGraphic(Paths.image('menuC2'));
                 menuC2.x = 320;
                 menuC2.scrollFactor.set(0, 0);
 		menuC2.updateHitbox();
 		menuC2.screenCenter();
-		menuC2.visible = false;
 		menuC2.antialiasing = ClientPrefs.globalAntialiasing;
 		add(menuC2);
+                menuC2.visible = false;
 
                 menuC3 = new FlxSprite(0).loadGraphic(Paths.image('menuC3'));
                 menuC3.x = 320;
                 menuC3.scrollFactor.set(0, 0);
 		menuC3.updateHitbox();
 		menuC3.screenCenter();
-		menuC3.visible = false;
 		menuC3.antialiasing = ClientPrefs.globalAntialiasing;
 		add(menuC3);
+                menuC3.visible = false;
 
                 menuC4 = new FlxSprite(0).loadGraphic(Paths.image('menuC4'));
                 menuC4.x = 320;
                 menuC4.scrollFactor.set(0, 0);
 		menuC4.updateHitbox();
 		menuC4.screenCenter();
-		menuC4.visible = false;
 		menuC4.antialiasing = ClientPrefs.globalAntialiasing;
 		add(menuC4);
+                menuC4.visible = false;
 
                 menuC5 = new FlxSprite(0).loadGraphic(Paths.image('menuC5'));
                 menuC5.x = 320;
                 menuC5.scrollFactor.set(0, 0);
 		menuC5.updateHitbox();
 		menuC5.screenCenter();
-		menuC5.visible = false;
 		menuC5.antialiasing = ClientPrefs.globalAntialiasing;
 		add(menuC5);
+                menuC5.visible = false;
 
                 UIbar = new FlxSprite(0).loadGraphic(Paths.image('menuBar'));
                 UIbar.scrollFactor.set(0, 0);
@@ -173,7 +173,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
 			//menuItem.screenCenter(X);
-                        menuItem.x += 100;
+                        menuItem.x += 50;
 			menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
 			if(optionShit.length < 6) scr = 0;
@@ -186,47 +186,47 @@ class MainMenuState extends MusicBeatState
                 //characters in right lol
                 if (optionShit[curSelected] == 'story_mode')
                 {
-                        menuC1.visible = true;
+                        menuC1.visible = true
                 }
                 else
                 {
-                        menuC1.visible = false;
+                        menuC1.visible = false
                 }
 
                 if (optionShit[curSelected] == 'freeplay')
                 {
-                        menuC2.visible = true;
+                        menuC2.visible = true
                 }
                 else
                 {
-                        menuC2.visible = false;
+                        menuC2.visible = false
                 }
 
                 if (optionShit[curSelected] == 'awards')
                 {
-                        menuC3.visible = true;
+                        menuC3.visible = true
                 }
                 else
                 {
-                        menuC3.visible = false;
+                        menuC3.visible = false
                 }
 
                 if (optionShit[curSelected] == 'credits')
                 {
-                        menuC4.visible = true;
+                        menuC4.visible = true
                 }
                 else
                 {
-                        menuC4.visible = false;
+                        menuC4.visible = false
                 }
 
                 if (optionShit[curSelected] == 'options')
                 {
-                        menuC5.visible = true;
+                        menuC5.visible = true
                 }
                 else
                 {
-                        menuC5.visible = false;
+                        menuC5.visible = false
                 }
 
 		//FlxG.camera.follow(camFollowPos, null, 1);
