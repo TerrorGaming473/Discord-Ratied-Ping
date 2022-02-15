@@ -173,7 +173,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
 			//menuItem.screenCenter(X);
-                        menuItem.x += 200;
+                        menuItem.x += 100;
 			menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
 			if(optionShit.length < 6) scr = 0;
@@ -186,7 +186,6 @@ class MainMenuState extends MusicBeatState
                 //characters in right lol
                 if (optionShit[curSelected] == 'story_mode')
                 {
-                        menuC1.updateHitbox();
                         menuC1.visible = true;
                 }
                 else
@@ -196,7 +195,6 @@ class MainMenuState extends MusicBeatState
 
                 if (optionShit[curSelected] == 'freeplay')
                 {
-                        menuC2.updateHitbox();
                         menuC2.visible = true;
                 }
                 else
@@ -206,7 +204,6 @@ class MainMenuState extends MusicBeatState
 
                 if (optionShit[curSelected] == 'awards')
                 {
-                        menuC3.updateHitbox();
                         menuC3.visible = true;
                 }
                 else
@@ -216,7 +213,6 @@ class MainMenuState extends MusicBeatState
 
                 if (optionShit[curSelected] == 'credits')
                 {
-                        menuC4.updateHitbox();
                         menuC4.visible = true;
                 }
                 else
@@ -226,7 +222,6 @@ class MainMenuState extends MusicBeatState
 
                 if (optionShit[curSelected] == 'options')
                 {
-                        menuC5.updateHitbox();
                         menuC5.visible = true;
                 }
                 else
