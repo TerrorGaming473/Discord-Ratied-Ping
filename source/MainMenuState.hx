@@ -43,14 +43,10 @@ class MainMenuState extends MusicBeatState
 	];
 
 	var magenta:FlxSprite;
+        var UIbar:FlxSprite:
 	var camFollow:FlxObject;
 	var camFollowPos:FlxObject;
 	var debugKeys:Array<FlxKey>;
-	private var char1:Character = null;
-	private var char2:Character = null;
-	private var char3:Character = null;
-	private var char4:Character = null;
-	private var char5:Character = null;
 
 	override function create()
 	{
@@ -74,7 +70,7 @@ class MainMenuState extends MusicBeatState
 
 		persistentUpdate = persistentDraw = true;
 
-	    var yScroll:Float = Math.max(0.25 - (0.05 * (optionShit.length - 4)), 0.1);
+	        var yScroll:Float = Math.max(0.25 - (0.05 * (optionShit.length - 4)), 0.1);
 		var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('menuBG'));
 		bg.scrollFactor.set(0, yScroll);
 		bg.setGraphicSize(Std.int(bg.width * 1.175));
@@ -99,6 +95,14 @@ class MainMenuState extends MusicBeatState
 		add(magenta);
 		// magenta.scrollFactor.set();
 
+                UIbar = new FlxSprite(0).loadGraphic(Paths.image('menuBar'));
+                UIbar.scrollFactor.set(0, 0);
+		UIbar.updateHitbox();
+		UIbar.screenCenter();
+		UIbar.visible = false;
+		UIbar.antialiasing = ClientPrefs.globalAntialiasing;
+		add(UIbar);
+
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 
@@ -119,7 +123,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.animation.play('idle');
 			menuItem.ID = i;
 			//menuItem.screenCenter(X);
-            menuItem.x += 300;
+                        menuItem.x += 300;
 			menuItems.add(menuItem);
 			var scr:Float = (optionShit.length - 4) * 0.135;
 			if(optionShit.length < 6) scr = 0;
@@ -130,31 +134,6 @@ class MainMenuState extends MusicBeatState
 		}
 
 		FlxG.camera.follow(camFollowPos, null, 1);
-
-        char1 == new Character(800, -130, 'bf', true);
-        char1.setGraphicSize(Std.int(char1.width * 0.8));
-        add(char1);
-        char1.visible = false;
-
-		char2 == new Character(800, -130, 'dad', true);
-        char2.setGraphicSize(Std.int(char2.width * 0.8));
-        add(char2);
-        char2.visible = false;
-
-		char3 == new Character(800, -130, 'monster', true);
-        char3.setGraphicSize(Std.int(char3.width * 0.8));
-        add(char3);
-        char3.visible = false;
-
-		char4 == new Character(800, -130, 'pico', true);
-        char4.setGraphicSize(Std.int(char4.width * 0.8));
-        add(char4);
-        char4.visible = false;
-
-		char5 == new Character(800, -130, 'gf', true);
-        char5.setGraphicSize(Std.int(char5.width * 0.8));
-        add(char5);
-        char5.visible = false;
 
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
 		versionShit.scrollFactor.set();
@@ -209,61 +188,6 @@ class MainMenuState extends MusicBeatState
 
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 7.5, 0, 1);
 		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
-
-        if (optionShit[curSelected] == 'story_mode')
-		{
-                char1.dance();
-                char1.updateHitbox();
-                char1.visible = true;
-        }
-        else
-        {
-                char1.visible = false;
-        }
-        
-        if (optionShit[curSelected] == 'freeplay')
-        {
-                char2.dance();
-                char2.updateHitbox();
-                char2.visible = true;
-        }
-        else
-        {
-                char2.visible = false;
-        }
-        
-        if (optionShit[curSelected] == 'awards')
-        {
-                char3.dance();
-                char3.updateHitbox();
-                char3.visible = true;
-        }
-        else
-        {
-                char3.visible = false;
-        }
-        
-        if (optionShit[curSelected] == 'credits')
-        {
-                char4.dance();
-                char4.updateHitbox();
-                char4.visible = true;
-        }
-        else
-        {
-                char4.visible = false;
-        }
-        
-        if (optionShit[curSelected] == 'options')
-        {
-                char5.dance();
-                char5.updateHitbox();
-                char5.visible = true;
-        }
-        else
-        {
-                char5.visible = false;
-        }
 
 		if (!selectedSomethin)
 		{
