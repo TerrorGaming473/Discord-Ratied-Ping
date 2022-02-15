@@ -325,47 +325,47 @@ class MainMenuState extends MusicBeatState
                 //characters in right lol
                 if (optionShit[curSelected] == 'story_mode')
                 {
-                        menuC1.visible = true
+                        menuC1.visible = true;
                 }
                 else
                 {
-                        menuC1.visible = false
+                        menuC1.visible = false;
                 }
 
                 if (optionShit[curSelected] == 'freeplay')
                 {
-                        menuC2.visible = true
+                        menuC2.visible = true;
                 }
                 else
                 {
-                        menuC2.visible = false
+                        menuC2.visible = false;
                 }
 
                 if (optionShit[curSelected] == 'awards')
                 {
-                        menuC3.visible = true
+                        menuC3.visible = true;
                 }
                 else
                 {
-                        menuC3.visible = false
+                        menuC3.visible = false;
                 }
 
                 if (optionShit[curSelected] == 'credits')
                 {
-                        menuC4.visible = true
+                        menuC4.visible = true;
                 }
                 else
                 {
-                        menuC4.visible = false
+                        menuC4.visible = false;
                 }
 
                 if (optionShit[curSelected] == 'options')
                 {
-                        menuC5.visible = true
+                        menuC5.visible = true;
                 }
                 else
                 {
-                        menuC5.visible = false
+                        menuC5.visible = false;
                 }
 
 		menuItems.forEach(function(spr:FlxSprite)
