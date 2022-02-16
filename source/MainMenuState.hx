@@ -101,7 +101,7 @@ class MainMenuState extends MusicBeatState
 		// magenta.scrollFactor.set();
 
                 menuC1 = new FlxSprite(0).loadGraphic(Paths.image('menuC1'));
-                menuC1.x = 640;
+                menuC1.x = 960;
                 menuC1.scrollFactor.set(0, 0);
 		menuC1.updateHitbox();
 		menuC1.screenCenter();
@@ -110,7 +110,7 @@ class MainMenuState extends MusicBeatState
 		add(menuC1);
 
                 menuC2 = new FlxSprite(0).loadGraphic(Paths.image('menuC2'));
-                menuC2.x = 640;
+                menuC2.x = 960;
                 menuC2.scrollFactor.set(0, 0);
 		menuC2.updateHitbox();
 		menuC2.screenCenter();
@@ -119,7 +119,7 @@ class MainMenuState extends MusicBeatState
 		add(menuC2);
 
                 menuC3 = new FlxSprite(0).loadGraphic(Paths.image('menuC3'));
-                menuC3.x = 640;
+                menuC3.x = 960;
                 menuC3.scrollFactor.set(0, 0);
 		menuC3.updateHitbox();
 		menuC3.screenCenter();
@@ -128,7 +128,7 @@ class MainMenuState extends MusicBeatState
 		add(menuC3);
 
                 menuC4 = new FlxSprite(0).loadGraphic(Paths.image('menuC4'));
-                menuC4.x = 640;
+                menuC4.x = 960;
                 menuC4.scrollFactor.set(0, 0);
 		menuC4.updateHitbox();
 		menuC4.screenCenter();
@@ -137,7 +137,7 @@ class MainMenuState extends MusicBeatState
 		add(menuC4);
 
                 menuC5 = new FlxSprite(0).loadGraphic(Paths.image('menuC5'));
-                menuC5.x = 640;
+                menuC5.x = 960;
                 menuC5.scrollFactor.set(0, 0);
 		menuC5.updateHitbox();
 		menuC5.screenCenter();
