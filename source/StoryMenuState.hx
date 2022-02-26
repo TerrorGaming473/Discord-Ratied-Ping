@@ -101,19 +101,17 @@ class StoryMenuState extends MusicBeatState
 		for (i in 0...WeekData.weeksList.length)
 		{
 			WeekData.setDirectoryFromWeek(WeekData.weeksLoaded.get(WeekData.weeksList[i]));
-			var weekThing:MenuItem = new MenuItem(0, bgSprite.y + 396, WeekData.weeksList[i]);
-			weekThing.y += ((weekThing.height + 20) * i);
+			var weekThing:MenuItem = new MenuItem(60, bgSprite.y + 740, WeekData.weeksList[i]);
 			weekThing.targetY = i;
 			grpWeekText.add(weekThing);
-
-			weekThing.screenCenter(X);
+			
 			weekThing.antialiasing = ClientPrefs.globalAntialiasing;
 			// weekThing.updateHitbox();
 
 			// Needs an offset thingie
 			if (weekIsLocked(i))
 			{
-				var lock:FlxSprite = new FlxSprite(weekThing.width + 10 + weekThing.x);
+				var lock:FlxSprite = new FlxSprite(weekThing.width + 10 + weekThing.y + 45);
 				lock.frames = ui_tex;
 				lock.animation.addByPrefix('lock', 'lock');
 				lock.animation.play('lock');
@@ -135,7 +133,7 @@ class StoryMenuState extends MusicBeatState
 		difficultySelectors = new FlxGroup();
 		add(difficultySelectors);
 
-		leftArrow = new FlxSprite(720, 48);
+		leftArrow = new FlxSprite(weekThing.x - 55, weekThing.y - 90);
 		leftArrow.frames = ui_tex;
 		leftArrow.animation.addByPrefix('idle', "arrow left");
 		leftArrow.animation.addByPrefix('press', "arrow push left");
@@ -222,12 +220,12 @@ class StoryMenuState extends MusicBeatState
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 			}
 
-			if (controls.UI_RIGHT)
+			if (controls.UI_UP)
 				rightArrow.animation.play('press')
 			else
 				rightArrow.animation.play('idle');
 
-			if (controls.UI_LEFT)
+			if (controls.UI_DOWN)
 				leftArrow.animation.play('press');
 			else
 				leftArrow.animation.play('idle');
@@ -388,7 +386,7 @@ class StoryMenuState extends MusicBeatState
 			if (item.targetY == Std.int(0) && !weekIsLocked(curWeek))
 				item.alpha = 1;
 			else
-				item.alpha = 0.6;
+				item.alpha = 0;
 			bullShit++;
 		}
 
