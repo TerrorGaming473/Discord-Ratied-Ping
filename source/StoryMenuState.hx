@@ -95,15 +95,14 @@ class StoryMenuState extends MusicBeatState
 
 		#if desktop
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("In the Menus", null);
+		DiscordClient.changePresence("In The Fuckin Menus", null);
 		#end
 
 		for (i in 0...WeekData.weeksList.length)
 		{
 			WeekData.setDirectoryFromWeek(WeekData.weeksLoaded.get(WeekData.weeksList[i]));
 			var weekThing:MenuItem = new MenuItem(30, bgSprite.y + 780, WeekData.weeksList[i]);
-			weekThing.screenCenter(X);
-			weekThing.screenCenter(Y);
+			weekThing.screenCenter();
 			grpWeekText.add(weekThing);
 			
 			weekThing.antialiasing = ClientPrefs.globalAntialiasing;
@@ -150,7 +149,7 @@ class StoryMenuState extends MusicBeatState
 		}
 		curDifficulty = Math.round(Math.max(0, CoolUtil.defaultDifficulties.indexOf(lastDifficultyName)));
 		
-		sprDifficulty = new FlxSprite(0, weekThing.y - 12);
+		sprDifficulty = new FlxSprite(0, 628);
 		sprDifficulty.antialiasing = ClientPrefs.globalAntialiasing;
 		changeDifficulty();
 
@@ -212,33 +211,33 @@ class StoryMenuState extends MusicBeatState
 		{
 			var upP = controls.UI_UP_P;
 			var downP = controls.UI_DOWN_P;
-			if (upP)
+			if (controls.UI_LEFT_P)
 			{
 				changeWeek(-1);
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 			}
 
-			if (downP)
+			if (controls.UI_RIGHT_P)
 			{
 				changeWeek(1);
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 			}
 
-			if (controls.UI_UP)
+			if (upP)
 				rightArrow.animation.play('press')
 			else
 				rightArrow.animation.play('idle');
 
-			if (controls.UI_DOWN)
+			if (downP)
 				leftArrow.animation.play('press');
 			else
 				leftArrow.animation.play('idle');
 
-			if (controls.UI_RIGHT_P)
+			if (downP)
 				changeDifficulty(1);
-			else if (controls.UI_LEFT_P)
+			else if (upP)
 				changeDifficulty(-1);
-			else if (upP || downP)
+			else if (controls.UI_LEFT_P || controls.UI_RIGHT_P)
 				changeDifficulty();
 
 			if(FlxG.keys.justPressed.CONTROL#if android || _virtualpad.buttonX.justPressed #end)
