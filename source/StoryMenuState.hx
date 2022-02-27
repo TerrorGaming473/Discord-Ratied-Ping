@@ -101,7 +101,7 @@ class StoryMenuState extends MusicBeatState
 		for (i in 0...WeekData.weeksList.length)
 		{
 			WeekData.setDirectoryFromWeek(WeekData.weeksLoaded.get(WeekData.weeksList[i]));
-			var weekThing:MenuItem = new MenuItem(60, bgSprite.y + 740, WeekData.weeksList[i]);
+			var weekThing:MenuItem = new MenuItem(30, bgSprite.y + 780, WeekData.weeksList[i]);
 			weekThing.targetY = i;
 			grpWeekText.add(weekThing);
 			
@@ -133,7 +133,7 @@ class StoryMenuState extends MusicBeatState
 		difficultySelectors = new FlxGroup();
 		add(difficultySelectors);
 
-		leftArrow = new FlxSprite(5, bgSprite.y + 650);
+		leftArrow = new FlxSprite(18, bgSprite.y + 788);
 		leftArrow.frames = ui_tex;
 		leftArrow.animation.addByPrefix('idle', "arrow left");
 		leftArrow.animation.addByPrefix('press', "arrow push left");
