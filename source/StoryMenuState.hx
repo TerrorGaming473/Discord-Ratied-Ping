@@ -102,7 +102,8 @@ class StoryMenuState extends MusicBeatState
 		{
 			WeekData.setDirectoryFromWeek(WeekData.weeksLoaded.get(WeekData.weeksList[i]));
 			var weekThing:MenuItem = new MenuItem(30, bgSprite.y + 780, WeekData.weeksList[i]);
-			weekThing.targetY = i;
+			weekThing.screenCenter(X);
+			weekThing.screenCenter(Y);
 			grpWeekText.add(weekThing);
 			
 			weekThing.antialiasing = ClientPrefs.globalAntialiasing;
@@ -140,6 +141,7 @@ class StoryMenuState extends MusicBeatState
 		leftArrow.animation.play('idle');
 		leftArrow.antialiasing = ClientPrefs.globalAntialiasing;
 		difficultySelectors.add(leftArrow);
+                leftArrow.visible = false;
 
 		CoolUtil.difficulties = CoolUtil.defaultDifficulties.copy();
 		if(lastDifficultyName == '')
@@ -148,7 +150,7 @@ class StoryMenuState extends MusicBeatState
 		}
 		curDifficulty = Math.round(Math.max(0, CoolUtil.defaultDifficulties.indexOf(lastDifficultyName)));
 		
-		sprDifficulty = new FlxSprite(0, leftArrow.y);
+		sprDifficulty = new FlxSprite(weekThing.x, weekThing.y - 12);
 		sprDifficulty.antialiasing = ClientPrefs.globalAntialiasing;
 		changeDifficulty();
 
@@ -161,6 +163,7 @@ class StoryMenuState extends MusicBeatState
 		rightArrow.animation.play('idle');
 		rightArrow.antialiasing = ClientPrefs.globalAntialiasing;
 		difficultySelectors.add(rightArrow);
+                rightArrow.visible = false;
 
 		add(grpWeekCharacters);
 
