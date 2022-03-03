@@ -127,7 +127,7 @@ class StoryMenuState extends MusicBeatState
 		{
 			var weekCharacterThing:MenuCharacter = new MenuCharacter((FlxG.width * 0.35) * (1 + char) - 150, charArray[char]);
 			weekCharacterThing.y += 350;
-			grpWeekCharacters.add(weekCharacterThing);
+			//grpWeekCharacters.add(weekCharacterThing);
 		}
 
 		difficultySelectors = new FlxGroup();
@@ -149,11 +149,12 @@ class StoryMenuState extends MusicBeatState
 		}
 		curDifficulty = Math.round(Math.max(0, CoolUtil.defaultDifficulties.indexOf(lastDifficultyName)));
 		
-		sprDifficulty = new FlxSprite(0, 628);
+		sprDifficulty = new FlxSprite(0, );
 		sprDifficulty.antialiasing = ClientPrefs.globalAntialiasing;
 		changeDifficulty();
 
 		sprDifficulty.screenCenter(X);
+ㅤㅤ             sprDifficulty.y += weekThing.y + 45
 		difficultySelectors.add(sprDifficulty);
 
 		rightArrow = new FlxSprite(leftArrow.x + 376, leftArrow.y);
