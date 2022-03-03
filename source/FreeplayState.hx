@@ -235,7 +235,6 @@ class FreeplayState extends MusicBeatState
 	private static var vocals:FlxSound = null;
 	override function update(elapsed:Float)
 	{
-                songText.screenCenter(X);
 		if (FlxG.sound.music.volume < 0.7)
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
