@@ -149,7 +149,7 @@ class StoryMenuState extends MusicBeatState
 		}
 		curDifficulty = Math.round(Math.max(0, CoolUtil.defaultDifficulties.indexOf(lastDifficultyName)));
 		
-		sprDifficulty = new FlxSprite(0, );
+		sprDifficulty = new FlxSprite(0, 0);
 		sprDifficulty.antialiasing = ClientPrefs.globalAntialiasing;
 		changeDifficulty();
 
