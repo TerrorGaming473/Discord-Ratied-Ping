@@ -28,7 +28,7 @@ class AchievementsMenuState extends MusicBeatState
 
 	override function create() {
 		#if desktop
-		DiscordClient.changePresence("Achievements Menu", null);
+		DiscordClient.changePresence("In Awards Menu", null);
 		#end
 
 		var menuBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
@@ -52,7 +52,7 @@ class AchievementsMenuState extends MusicBeatState
 			var achieveName:String = Achievements.achievementsStuff[achievementIndex[i]][2];
 			var optionText:Alphabet = new Alphabet(0, (100 * i) + 210, Achievements.isAchievementUnlocked(achieveName) ? Achievements.achievementsStuff[achievementIndex[i]][0] : '?', false, false);
 			optionText.isMenuItem = true;
-			optionText.x += 280;
+                        optionText.x += 280;
 			optionText.xAdd = 200;
 			optionText.targetY = i;
 			grpOptions.add(optionText);
@@ -81,9 +81,11 @@ class AchievementsMenuState extends MusicBeatState
 		super.update(elapsed);
 
 		if (controls.UI_UP_P) {
+                        FlxG.sound.play(Paths.sound('confirmMenu'));
 			changeSelection(-1);
 		}
 		if (controls.UI_DOWN_P) {
+                        FlxG.sound.play(Paths.sound('confirmMenu'));
 			changeSelection(1);
 		}
 
