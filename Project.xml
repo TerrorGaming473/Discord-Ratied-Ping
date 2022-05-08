@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="FNF: Discord Ratied Ping" file="DiscordMod" packageName="com.terrorgaming.discordmod" package="com.terrorgaming.discordmod" main="Main" version="69" company="TerrorGaming" />
+	<app title="FNF: Discord Ratied Ping" file="DRP" packageName="com.terrorgaming.drp" package="com.terrorgaming.drp" main="Main" version="69" company="TerrorGaming" />
 
 	<!--Switch Export with Unique ApplicationID and Icon-->
 	<set name="APP_ID" value="0x0100f6c013bbc000" />
